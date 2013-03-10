@@ -1,10 +1,23 @@
 #include <stdio.h>
 #include <stdlib.h>
 
-// please enter whatever
-
 int main()
 {
-	printf("hello world!\n");
+	struct person
+	{
+		int age;
+		char *name;
+	};
+	
+	struct person first;
+	struct person *ptr;
+	
+	first.age = 28;
+	char fullname[100]  = "honglong wu";
+	first.name = fullname;
+	
+	ptr = &first;
+	printf("%d-%s\n",first.age, ptr->name);
+	
 	return 0;
 }
